@@ -1,0 +1,131 @@
+@media screen { 
+	
+body {
+		margin: 100px 150px 100px 130px;;
+		font-size: 11pt;
+        background: linear-gradient(rgba(0, 0 ,0 , .6), rgba(0, 0 ,0 , .6)), url("https://www.photohdx.com/images/2016/03/dramatic-vintage-brown-wood-texture-background.jpg") fixed center center;
+        color: black;
+        align-self: center;
+}
+    
+    
+    .section1 {
+        font-family: Copperplate gothic light;
+        text-align: center;
+        color: coral
+            
+            
+    }
+    
+    .Results {
+        background-color: bisque;
+    }
+    
+    h1 {
+        font-size: 72pt;
+        
+            
+    }
+    
+    h5{
+        font-size: 20pt;
+    }
+    
+    p{
+        font-size: 15pt;
+    }
+    
+    button {
+        color: black;
+        background-color: coral;
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: Copperplate gothic light;
+        font-size: 10pt;
+        border-radius: 5px;
+            
+    }
+    
+    button:hover {
+        background-color: saddlebrown;
+    }
+    
+    #flessenbar {
+        max-width: 100%;
+        height: auto;
+        
+    }
+        
+    #liqueur {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 16%
+    }
+    #vodka {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 23.5%
+    }
+    #rum {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 32%
+    }
+    #tequila {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 38%
+    }
+    #bitter {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 45%
+    }
+    #vermouth {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 50.5%
+    }
+    #champagne {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 57.5%
+    }
+    #beer {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 65.5%
+    }
+    #gin {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 71.5%
+    }
+    #wine {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 77.5%
+    }
+    
+
+    #whisky {
+        position: absolute;
+        transition: .5s ease;
+        top: 100%;
+        left: 83%
+    }

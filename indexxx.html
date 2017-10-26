@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<title>
+			Cocktailicious
+		</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
+
+        <script>
+            
+            function Liqueur(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("LiqueurResults"); }
+            );
+            }
+            
+            function Tequila(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("TequilaResults"); }
+            );}
+            
+            function Vodka(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("VodkaResults"); }
+            );}
+            
+            function Rum(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("RumResults"); }
+            );}
+            
+            function Bitter(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("BitterResults"); }
+            );}
+            
+            function Vermouth(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("VermouthResults"); }
+            );}
+            
+            function Champagne(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("ChampagneResults"); }
+            );}
+            
+            function Beer(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("BeerResults"); }
+            );}
+            
+            function Gin(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("GinResults"); }
+            );}
+            
+            function Wine(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("WineResults"); }
+            );}
+            
+            function Whiskey(){
+            $(document).ready(
+        function (){ sgvizler.containerDraw("WhiskeyResults"); 
+       });}
+            
+            
+                          
+        
+        </script>
+		
+	</head>
+	
+	<body id="body">
+        
+	<section class= "section1">
+        <h1>Cocktailicious</h1>
+        <h5>By Isabelle Kuiper, Romy Vos and Femke Volmer</h5>
+        <p>Welcome to Cocktailicious! </p>
+        <p>What are you in the mood for?</p>
+        <p>Select the bottle of your choice and discover all the cocktails.</p>
+        </section>
+        
+    <section class="section2">
+        
+        <img id="flessenbar" src="Images/barflessenoldlook.jpg">
+        <button id="liqueur" onclick="Liqueur()">Liqueur</button>
+        <button id="vodka" onclick="Vodka()" >Vodka</button>
+        <button id="rum" onclick="Rum()">Rum</button>
+        <button id="tequila" onclick="Tequila()">Tequila</button>
+        <button id="bitter" onclick="Bitter()" >Bitter</button>
+        <button id="vermouth" onclick="Vermouth()" >Vermouth</button>
+        <button id="champagne" onclick="Champagne()" >Champagne</button>
+        <button id="beer" onclick="Beer()" >Beer</button>
+        <button id="gin" onclick="Gin()">Gin</button>
+        <button id="wine" onclick="Wine()">Wine</button>
+        <button href="#WhiskeyResults" id="whisky" onclick="Whiskey();" >Whisky</button>
+        
+        </section>    
+        
+        <section id="section3">
+        
+        <div class="Results" id="LiqueurResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:LiqueurCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>    
+            
+        <div class="Results" id="TequilaResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:TequilaCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            
+            <div class="Results" id="VodkaResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:VodkaCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            <div class="Results" id="RumResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:RumCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            <div class="Results" id="BitterResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:BitterCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+        
+            <div class="Results" id="VermouthResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:VermouthCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            <div class="Results" id="ChampagneResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:ChampagneCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            <div class="Results" id="BeerResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:BeerCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            <div class="Results" id="GinResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:GinCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            <div class="Results" id="WineResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:WineCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+            <div class="Results" id="WhiskeyResults"
+     data-sgvizler-endpoint="http://localhost:5820/Cocktailicious1/query?reasoning=true"
+     data-sgvizler-query="PREFIX ct: <http://www.semanticweb.org/cocktailicious_project_k&g/>
+
+        SELECT ?drink ?ingredients ?recipe (group_concat(?shop) as ?shops)
+        WHERE {?drink a ct:WhiskeyCocktail.
+        ?drink ct:hasRecipe ?recipename.
+            ?recipename rdfs:comment ?recipe.
+            ?drink ct:hasIngredients ?ingredientsname.
+            ?ingredientsname rdfs:comment ?ingredients.
+            ?shop a ct:LiquorStoreLink.}
+            GROUP BY ?drink ?ingredients ?recipe"
+     data-sgvizler-chart="google.visualization.Table"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="max-width:100%; height:400px;"></div>
+            
+        </section>
+      
+    </body>
+</html>
